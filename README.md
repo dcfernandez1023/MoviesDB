@@ -40,7 +40,7 @@ To get started running this project, follow the steps below:
 You have two options to run this project and load the database. You can either parse the .txt files independently and then 
 load the resulting .csv files manually through the Postgres CLI, or you can parse and load the database all at once through python.
 
-### Parsing and Loading the Database Manually
+### Option 1: Parsing and Loading the Database Manually
 - From the root folder of the project, run `python parser.py <path-to-db-files>`, where `<path-to-db-files>` is the _absolute path_ to the directory where your database .txt files are.
 
 
@@ -66,7 +66,7 @@ and make sure the hard coded paths to the .csv files are correct.
 
     `psql -U postgres -d moviesdb -a -f dcfernandez-code-phase2.sql > <name-of-file>`
 
-### Parsing and Loading the Database with Python
+### Option 2: Parsing and Loading the Database with Python
 - From the root folder of the project, run `python driver.py <path-to-db-files>`, where `<path-to-db-files>` is the _absolute path_ to the directory where your database .txt files are.
 
 - If successful, the .csv files should appear in the `db_files` directory, and the database tables will be loaded 
