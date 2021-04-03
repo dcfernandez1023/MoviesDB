@@ -1,0 +1,6 @@
+.venv
+venv/
+
+
+db_files/*
+!db_files/temp.txt
