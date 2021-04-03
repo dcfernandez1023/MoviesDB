@@ -1,3 +1,7 @@
+import os
+import stat
+
+
 def tokenize_movie_entry(entry):
     # need to parse 3 separate fields: id, title+year, genres
     start_delim = entry.find(":")

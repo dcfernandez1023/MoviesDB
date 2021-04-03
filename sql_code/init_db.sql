@@ -1,8 +1,9 @@
 /*
  * These queries initialize the database and load it with data from the parsed CSV files that are
- * located in the root folder of this project under the 'db_files' directory. This .sql script is intended
- * to be called directly from the command line using the Postgres CLI. If you run this script, be sure to change
- * the paths to the CSV files below, as they are hard coded.
+ * located in the root folder of this project under the 'db_files' directory. This file is expecting
+ * to be called by the cursor.execute() method of the psycopg2 library and is also expecting parameters
+ * pointing to the path of the CSV files to be read. This .sql script is intended to be called within
+ * this python project through the use of the psycopg2 module.
 */
 
 /*** INITIALIZE TABLES ***/
@@ -51,24 +52,24 @@ CREATE TABLE Has_genre(
 /*** LOAD DATA ***/
 
 COPY Movies(id, title, year)
-FROM 'C:\\Users\\Dominic\\DB-Project\\MoviesDB\\db_files\\movies_parsed.csv'
+FROM %(movies_csv)s
 DELIMITER ',';
 
 COPY Genres(title)
-FROM 'C:\\Users\\Dominic\\DB-Project\\MoviesDB\\db_files\\genres_parsed.csv'
+FROM %(genres_csv)s
 DELIMITER ',';
 
 
 COPY Ratings(user_id, movie_id, rating, time_stamp)
-FROM 'C:\\Users\\Dominic\\DB-Project\\MoviesDB\\db_files\\ratings_parsed.csv'
+FROM %(ratings_csv)s
 DELIMITER ',';
 
 COPY Tags(user_id, movie_id, tag, time_stamp)
-FROM 'C:\\Users\\Dominic\\DB-Project\\MoviesDB\\db_files\\tags_parsed.csv'
+FROM %(tags_csv)s
 DELIMITER ',';
 
 COPY Has_genre(movie_id, title)
-FROM 'C:\\Users\\Dominic\\DB-Project\\MoviesDB\\db_files\\has_genre_parsed.csv'
+FROM %(has_genre_csv)s
 DELIMITER ',';
 
 INSERT INTO Users

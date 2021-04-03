@@ -33,7 +33,7 @@ def main():
         )
         # execute sql code
         postgres.execute_sql_file(
-            "./sql_code/dcfernandez-code-phase2.sql",
+            "./sql_code/init_db.sql",
             {
                 "genres_csv": os.getcwd() + "\\db_files\\genres_parsed.csv",
                 "has_genre_csv": os.getcwd() + "\\db_files\\has_genre_parsed.csv",
