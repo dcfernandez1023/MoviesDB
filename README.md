@@ -11,14 +11,14 @@ parse and load a Postgres database with the data supplied from MovieLens.
 To get started running this project, follow the steps below:
 
 - Clone this repository locally on your computer  
-    `git clone`
+    `git clone https://github.com/dcfernandez1023/MoviesDB.git`
 
 
 - Create python virtual environment (venv) in the root folder of the project  
-    `python -m venv`
+    `python -m venv <path-to-venv>`
   
 
-- Navigate to directory containing the `activate` file  
+- Navigate to directory containing the `activate` file (usually in Scripts directory)  
     `cd /venv/<path-to-activate-file>`  
   
 
@@ -33,11 +33,13 @@ To get started running this project, follow the steps below:
 - Set environment variables `POSTGRES_USERNAME` and `POSTGRES_PASSWORD`on your OS to connect to Postgres
 
 # Usage
-From the root folder of the project, run:  
+From the root folder of the project, run  
 
-`python driver.py <absolute-path-to-db-file-directory>`  
+`python driver.py <path-to-db-files>`  
 
-If the steps from the installation section were successful, this should be the result:
+where `<path-to-db-files>` is the _absolute path_ to the directory where your database .txt files are.
+
+If successful, this should be the result:
 
     # Parsing movie data...
     --> Movies Parsed ✔
@@ -88,7 +90,7 @@ The default structure of this project from the root folder is as follows:
 to the directory where those .txt files are as a command line argument)
 
 This project loads the data into the database in two main steps: parsing and querying.  When `driver.py` 
-is run, each script in the `parsing_scripts` directory is called to read their respective .txt files located by the absolute path provided through the command line argument
+is run, each script in the `parsing_scripts` directory is called to read their respective .txt files
 and parse them into the .csv files that will be loaded into the database.  
 
 After the .csv files are created, `driver.py` then instantiates a `PostgresAccess` object (which is a wrapper class to facilitate connecting to Postgres) and establishes a connection to Postgres using the `psycopg2` module.
