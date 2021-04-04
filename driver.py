@@ -39,7 +39,7 @@ def main():
                 "has_genre_csv": os.getcwd() + "\\db_files\\has_genre_parsed.csv",
                 "movies_csv": os.getcwd() + "\\db_files\\movies_parsed.csv",
                 "ratings_csv": os.getcwd() + "\\db_files\\ratings_parsed.csv",
-                "tags_csv": os.getcwd() + "\\db_files\\ratings_parsed.csv"
+                "tags_csv": os.getcwd() + "\\db_files\\tags_parsed.csv"
             }
         )
         postgres.close_connection()

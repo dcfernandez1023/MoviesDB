@@ -141,10 +141,13 @@ to the directory where those .txt files are as a command line argument)
 
 ### Description of Files
 
-- `driver.py` is the driver code/entry point of the project. It runs the parsing scripts and loads the database.
+- `driver.py` is the driver code/entry point of the project. It runs the parsing scripts and loads the database. 
 
 
-- The files in the `parsing_scripts` are used to parse their respective .txt files and parse them into .csv files, which will be later on 
+- `parser.py` is used if you want to parse and load the database manually (as described in the Usage section above).
+
+
+- The python scripts in the `parsing_scripts` directory are used to parse their respective .txt files and parse them into .csv files, which will be later on 
 loaded into the database.  
 
 

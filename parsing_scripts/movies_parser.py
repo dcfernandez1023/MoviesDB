@@ -56,8 +56,12 @@ def parse_genres(movie_id, genres_string, current_genres):
     has_genre_data = []
     tokens = genres_string.split("|")
     for token in tokens:
-        csv = movie_id + ","
-        csv += token
+        csv = ""
+        if token != "(no genres listed)":
+            csv = movie_id + ","
+            csv += token
+        else:
+            csv = movie_id + "," + ""
         has_genre_data.append(csv)
         current_genres.update({token: True})
     return has_genre_data
