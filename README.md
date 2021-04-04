@@ -148,7 +148,7 @@ to the directory where those .txt files are as a command line argument)
 - `parser.py` is used if you want to parse and load the database manually (as described in the Usage section above).
 
 
-- The python scripts in the `parsing_scripts` directory are used to parse their respective .txt files and parse them into .csv files, which will be later on 
+- The python scripts in the `parsing_scripts` directory are used to parse their respective .txt files and load them into .csv files, which will be later on 
 loaded into the database.  
 
 
