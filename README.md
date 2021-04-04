@@ -182,5 +182,5 @@ the SQL file as a string and sends it as STDIN to Postgres to execute:
     FROM %(movies_csv)s
     DELIMITER ',';
 
-After Postgres finishes its execution (takes around 60 sec.), then the connection to Postgres is closed and 
+After Postgres finishes its execution (takes around 50 sec.), then the connection to Postgres is closed and 
 `driver.py` terminates.  
