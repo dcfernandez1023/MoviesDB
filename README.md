@@ -124,6 +124,7 @@ The path to the .csv files relative to the root folder of the project is `./db_f
 ### Project Structure
     
     - driver.py
+    - parser.py
     - db_files
     - parsing_scripts
         - movies_parser.py
