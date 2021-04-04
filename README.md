@@ -73,14 +73,14 @@ and make sure the hard coded paths to the .csv files are correct.
 with the expected data. The prompt below indicates a successful execution:
 
         # Parsing movie data...
-        --> Movies Parsed ✔
-        --> Genres Parsed ✔
-        --> Ratings parsed ✔
-        --> Tags parsed ✔
+            --> Movies Parsed ✔
+            --> Genres Parsed ✔
+            --> Ratings parsed ✔
+            --> Tags parsed ✔
         # Loading data into Postgres...
         # Successfully loaded database ✔
-    
-        ----- Finished in 93 seconds -----
+        
+        ----- Finished in 71 seconds -----
 
 ### Errors
 If something goes wrong, the error should look something like this:  
