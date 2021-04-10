@@ -4,8 +4,7 @@ import traceback
 import sys
 
 
-# driver code to prepare csv files that will be
-# loaded into the database
+# driver code to parse csv files that will be loaded into the database
 def main():
     try:
         if len(sys.argv) != 2:

@@ -10,8 +10,7 @@ parse and load a Postgres database with the data supplied from MovieLens.
 # Installation
 To get started running this project, follow the steps below:
 
-- Clone this repository locally on your computer  
-    `git clone https://github.com/dcfernandez1023/MoviesDB.git`
+- Fork this repository and pull the code down locally on your computer
 
 
 - Create python virtual environment (venv) in the root folder of the project  

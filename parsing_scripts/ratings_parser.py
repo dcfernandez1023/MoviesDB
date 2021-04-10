@@ -1,3 +1,5 @@
+# opens and parses the ratings file into a CSV file
+# @param data_dir - the absolute path to the directory the ratings.txt file is in
 def ratings_to_csv(data_dir):
     ratings_file = open(data_dir + "/ratings.txt", "r", encoding='utf-8')
     ratings_parsed = open("./db_files/ratings_parsed.csv", "a", encoding='utf-8')

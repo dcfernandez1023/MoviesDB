@@ -1,3 +1,6 @@
+# tokenizes a line in the tag file into an array of tokens
+# @param entry - a line in the tag file
+# @return array of tokens ( e.g. [user_id, movie_id, tag, timestamp] )
 def tokenize_tag(entry):
     # need to parse 4 separate fields: user_id, movie_id, tag, timestamp
     # since there are 4 fields, we should be expecting 3 delimiters
@@ -41,6 +44,8 @@ def tokenize_tag(entry):
     return [user_id, movie_id, tag, timestamp]
 
 
+# opens and parses the tags file into a CSV file
+# @param data_dir - the path to the directory the tags.txt file is in
 def tags_to_csv(data_dir):
     tags_file = open(data_dir + "/tags.txt", "r", encoding='utf-8')
     tags_parsed = open("./db_files/tags_parsed.csv", "a", encoding='utf-8')

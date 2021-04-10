@@ -15,6 +15,8 @@ DROP TABLE IF EXISTS Ratings;
 DROP TABLE IF EXISTS Tags;
 DROP TABLE IF EXISTS Has_genre;
 
+SET CLIENT_ENCODING TO 'utf8';
+
 /* entity sets */
 CREATE TABLE Movies(
     id Integer PRIMARY KEY,

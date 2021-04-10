@@ -1,7 +1,6 @@
-import os
-import stat
-
-
+# tokenizes a line in movies.txt into an array of tokens
+# @param entry - a line in the movies.txt file
+# @return array with tokens representing a line in the movies.txt file
 def tokenize_movie_entry(entry):
     # need to parse 3 separate fields: id, title+year, genres
     start_delim = entry.find(":")
@@ -30,6 +29,10 @@ def tokenize_movie_entry(entry):
     return [movie_id.strip(), title_year.strip(), genres.strip()]
 
 
+# parses the title and year
+# (e.g. Avengers (2013) becomes [Avengers, 2013]
+# @param title_and_year - the title and year string
+# @return an array with the tokenized title and year
 def parse_title_and_year(title_and_year):
     year_start = title_and_year.rfind("(")
     if year_start == -1:
@@ -67,6 +70,8 @@ def parse_genres(movie_id, genres_string, current_genres):
     return has_genre_data
 
 
+# opens movies file and parses it into a CSV file
+# @param data_dir - the path to the directory that movies.txt is in
 def movies_to_csv(data_dir):
     # open files
     movies_file = open(data_dir + "/movies.txt", "r", encoding='utf-8')
