@@ -5,7 +5,9 @@
 # Overview
 The goal of this project is to implement and load a relational database with a large data set coming from the 
 online movie recommender, MovieLens. This project contains all the necessary scripts and SQL code to 
-parse and load a Postgres database with the data supplied from MovieLens. 
+parse and load a Postgres database with the data supplied from MovieLens. The E/R diagram of the database is as follows:
+![image](https://user-images.githubusercontent.com/54515508/138371685-dff07431-474a-4f4c-8221-596f3640d1fc.png)
+
 
 # Installation
 To get started running this project, follow the steps below:
