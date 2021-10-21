@@ -4,3 +4,5 @@ venv/
 
 db_files/*
 !db_files/temp.txt
+
+sql_code/moviesdb_dump_file
